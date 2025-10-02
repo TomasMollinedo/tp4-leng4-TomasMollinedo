@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename='/tp2-leng4-TomasMollinedo'>
+      <BrowserRouter basename='/tp4-leng4-TomasMollinedo'>
         <Encabezado/>
       <Routes>
 				<Route path="/" element={<Home/>}/>
