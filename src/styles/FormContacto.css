@@ -1,0 +1,113 @@
+:root{
+  --text: #e9e9e9;
+  --muted: #c9c9c9;
+
+  --input-bg: #2c2c2c;
+  --input-border: rgba(255,255,255,.22);
+
+  /* Colores del botón */
+  --btn-base: #d4d4d4;      /* gris claro por defecto */
+  --btn-text: #111;
+  --btn-hover: #22c55e;     /* verde SOLO para el hover del botón */
+}
+
+/* Grilla del formulario */
+.contacto-form{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 18px;                  /* + espacio vertical general */
+  column-gap: 18px;
+}
+
+/* En pantallas medias/subas */
+@media (min-width: 640px){
+  .contacto-form{
+    grid-template-columns: 1fr 1fr;
+    row-gap: 22px;               
+    column-gap: 32px;            
+  }
+  .fila-completa{
+    grid-column: 1 / -1;
+  }
+}
+
+/* Grupo campo + label */
+.campo{
+  display: grid;
+  gap: 6px;
+}
+
+.campo label{
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+
+.input,
+.textarea{
+  width: 100%;
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .02s ease-in;
+}
+
+.input:hover,
+.textarea:hover{
+  border-color: rgba(255,255,255,.30);
+}
+
+
+.input:focus,
+.textarea:focus{
+  border-color: rgba(255,255,255,.38);  /* gris más claro */
+  box-shadow: 0 0 0 3px rgba(255,255,255,.10);  /* halo suave gris */
+}
+
+/* Textarea */
+.textarea{
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* -------- Botón Enviar centrado -------- */
+.boton-enviar{
+  background: var(--btn-base);      /* gris claro */
+  color: var(--btn-text);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  cursor: pointer;
+
+  /* CENTRADO y ancho contenido */
+  display: block;
+  width: min(240px, 100%);          /* botón más contenido */
+  margin: 4px auto 0;               /* << centra el botón en la grilla */
+  transition: background-color .15s ease, color .15s ease, transform .06s ease, box-shadow .2s ease;
+}
+
+.boton-enviar:hover{
+  background: var(--btn-hover);     /* verde SOLO al hover */
+  color: #052e16;
+}
+
+.boton-enviar:active{
+  transform: translateY(1px) scale(.995);
+}
+
+.boton-enviar:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212,212,212,.45);
+}
+
+/* Placeholders */
+.input::placeholder,
+.textarea::placeholder{
+  color: #a9a9a9;
+}

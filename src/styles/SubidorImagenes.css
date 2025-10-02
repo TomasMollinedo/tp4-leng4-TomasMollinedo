@@ -1,0 +1,45 @@
+.subidor {
+  font-family: sans-serif;
+  padding: 20px;
+  display: flex;            /* Dos columnas principales */
+  gap: 20px;                /* Espacio entre cajainput y caja-resultado */
+}
+
+/* Caja del input */
+.subidor #cajainput {
+  flex: 1;                  /* Columna izquierda */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Caja de resultados */
+.subidor #caja-resultado {
+  flex: 1;                  /* Columna derecha */
+  display: flex;
+  flex-direction: column;   /* Info arriba + imagen debajo */
+  gap: 15px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  min-height: 300px;
+}
+
+/* Texto de información */
+.subidor #cajainfo {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Imagen debajo */
+.subidor #cajaimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subidor #cajaimg img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

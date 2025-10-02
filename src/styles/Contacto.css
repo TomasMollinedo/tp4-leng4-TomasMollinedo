@@ -1,0 +1,56 @@
+/* Contenedor general */
+.contacto {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Título centrado SIEMPRE */
+.contacto-title {
+  text-align: center;
+}
+
+/* Layout: dos columnas, bien separadas y centradas */
+.contacto-layout {
+  display: flex;
+  justify-content: center;   /* centra el bloque de columnas */
+  align-items: flex-start;   /* alinea arriba */
+  gap: 120px;                 /* <<< separación grande entre form y mapa */
+}
+
+/* Columnas con ancho cómodo y límites para que no se estiren demasiado */
+.contacto-col {
+  flex: 0 1 520px;           /* base ~520px, reduce si no entra */
+  min-width: 320px;          /* no menos de 320px */
+}
+
+/* Mapa responsive con borde y radio para integrarlo al estilo */
+.map-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;       /* cambia a 16/9 si prefieres */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #3a3a3a;
+  background: #2f2f2f;
+}
+
+.map-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* En pantallas chicas, apila y mantiene buen espacio */
+@media (max-width: 900px) {
+  .contacto-layout {
+    flex-direction: column;
+    gap: 24px;               /* un poco menos en móvil */
+  }
+  .contacto-col {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
