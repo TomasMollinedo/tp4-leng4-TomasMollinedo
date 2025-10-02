@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/tp2-leng4-TomasMollinedo/'
+  base: '/tp4-leng4-TomasMollinedo/'
 })
